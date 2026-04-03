@@ -130,21 +130,6 @@ async function getdata(){
 getdata()
 
 
-async function sendData(){
-    const response=await fetch('',{
-        method:'Post',
-        headers:{
-            "content-Type":"application/json"
-        },
-        body:JSON,stringify({
-            title:"New Product",
-            description:"This is a new product"
-            price
-        })
-    })
-}
-
-
 localStorage.setItem("name","Alex")
 localStorage.setItem("age",45)
 
@@ -159,4 +144,60 @@ sessionStorage.setItem("age","45")
 
 console.log(sessionStorage.getItem("name"))
 console.log(sessionStorage.getItem("age"))
+
+document.cookie="name=Alex;expires=Wed, 25 Feb 2026 23:59:59 GMT"
+document.cookie="age=45;expires=Wed, 25 Feb 2026 23:59:59 GMT"
+
+console.log(document.cookie)
+
+function generate(){
+   // yield 1
+   // yield 2
+   // yield 3
+    let index=25017343
+    while(true){
+        yield index
+        index++
+    }
+} 
+
+const gen=generate()
+console.log(gen)
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+
+function add(a){
+    return function(b){
+        return function(c){
+            return a+b+c
+        }
+    }
+}
+
+const first=add(1)
+console.log(first)
+const second=first(2)
+console.log(second)
+console.log(second(3))
+
+console.log(add(1)(2)(3))
+console.log(add(1,2,3))
+
+const form=document.querySelector("form")
+form.addEventListener("submit",async(event)=>{
+    event.preventDefault()
+    const name=form.elements["name"].value
+    const email=form.elements["email"].value
+    console.log("Name:", name);
+    console.log(searchedcity);
+})
+function showhistory(){
+    const history=JSON.parse=(localstorage.getItem("searchhistory"))
+    history.forEach((city)=>{
+        weatherhistory
+    })
+}
+
 

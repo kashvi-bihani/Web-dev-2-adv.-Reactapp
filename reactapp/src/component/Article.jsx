@@ -1,0 +1,25 @@
+import React,{useState} from 'react'
+
+function Article(){
+    const[count,setCount]=useState(0)
+    const[Age,setAge]=useState(0)
+    const[Name,setName]=useState(0)
+    
+    //let count =0
+    const handleIncrement=()=>{
+        setCount(count-1)
+        console.log(count)
+    }
+    return(
+        <div>
+            <h2>Article</h2>
+            <p>This is a article </p>
+            <h2>{count}</h2>
+            <button onClick={handleIncrement}>Increment</button>
+            <button onClick={handleDecrement}>Decrement</button>
+            
+        </div>
+    )
+}
+export default Article  
+

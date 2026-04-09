@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import ArtStyle from "../css/Article.module.css"
 
 function Article(){
     const[count,setCount]=useState(0)

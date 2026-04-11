@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Homepage(){
-    const loggedin=False
+    const loggedin = false;
 //    if(loggedin){
 //       return (
 //           <button>Logout</button>
@@ -12,9 +12,11 @@ function Homepage(){
 //           <button>Login </button>
 //       )
 //   }
-return loggedin?<button>Logout</button>:<button>Login</button>
+
+    return loggedin 
+        ? <button>Logout</button> 
+        : <button>Login</button>
 }
 
-export default Homepage 
-
+export default Homepage;
 

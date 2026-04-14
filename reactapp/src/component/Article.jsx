@@ -2,6 +2,7 @@
 import ArtStyle from "../css/Article.module.css"
 
 
+
 function Article() {
   const [count, setCount] = useState(0)
   const[Age,setAge]=useState(0)
@@ -24,7 +25,7 @@ function Article() {
       <h2>{count}</h2>
 
       <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
+      <button className={ArtStyle.btn} onClick={handleDecrement}>Decrement</button>
     </div>
   )
 }

@@ -21,7 +21,7 @@
  //export default Menu 
 
  import React, { Component } from "react";
-import Style from "../css/menu.module.css";
+ import Style from "../css/menu.module.css";
 
 export default class Menu extends Component {
   constructor(props) {
@@ -46,11 +46,9 @@ export default class Menu extends Component {
           <li>Politics</li>
           <li>Tech</li>
         </ul>
-
-        {/* ✅ safety check */}
         <h2>{this.state ? this.state.count : 0}</h2>
 
-        <button className={Style.btn} onClick={this.handleIncrement}>
+        <button className={Style.button} onClick={this.handleIncrement}>
           Increment
         </button>
       </div>

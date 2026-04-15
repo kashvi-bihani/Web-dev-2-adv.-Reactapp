@@ -21,7 +21,9 @@
  //export default Menu 
 
  import React, { Component } from "react";
+ import { add } from "./utility";
  import Style from "../css/menu.module.css";
+ // import ArtStyle from "../css/Article.module.css"
 
 export default class Menu extends Component {
   constructor(props) {

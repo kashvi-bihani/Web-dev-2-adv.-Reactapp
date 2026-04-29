@@ -23,6 +23,7 @@
  import React, { Component } from "react";
  import { add } from "./utility";
  import Style from "../css/menu.module.css";
+ import {link} from 'react-router-dom'
  // import ArtStyle from "../css/Article.module.css"
 
 export default class Menu extends Component {
@@ -47,6 +48,7 @@ export default class Menu extends Component {
           <li>Entertainment</li>
           <li>Politics</li>
           <li>Tech</li>
+          <link className='bg-amber-100 text-black p-1 m-2 to="/article"><button>'></link>
         </ul>
         <h2>{this.state ? this.state.count : 0}</h2>
 
@@ -57,3 +59,4 @@ export default class Menu extends Component {
     );
   }
 }
+

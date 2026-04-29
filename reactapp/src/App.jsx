@@ -6,6 +6,9 @@ import './App.css'
 import Menu from "./component/menu"
 import Article from './component/Article'
 import Homepage from './component/Homepage'
+import {Route, Routes} from "react-router-dom"
+import Profile from './component/Profile'
+import { UserContext } from './UserContext'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +16,16 @@ function App() {
 
   return (
     <>
+    <UserContext
+    <Routes>
+      <Route path="/article" element={<Article data={data} />}/>
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path="/"element={<><Homepage/><Menu/></>}/>
+      <Route path="/profile/:id" element = {<Profile/>}/>
+      
+    </Routes>
+    <UserContext.Provider></UserContext.Provider>
+
     <Menu count ={count} setCount={setCount}/>
     <Article></Article>
     <Homepage></Homepage>
